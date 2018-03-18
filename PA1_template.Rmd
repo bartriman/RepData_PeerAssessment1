@@ -36,7 +36,7 @@ spd <- aggregate(steps~date, ACdata, sum)
 hist(spd$steps, main = "Total steps per day", col = "pink", xlab = "Number of steps")
 
 ```
-![Histogram of number of steps per day] (RepData_PeerAssessment1/figures/SPD.png)
+![Histogram of number of steps per day](RepData_PeerAssessment1/figures/SPD.png)
 
 
 Caluclating mean and median of steps per day
