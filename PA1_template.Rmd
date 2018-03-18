@@ -36,7 +36,7 @@ spd <- aggregate(steps~date, ACdata, sum)
 hist(spd$steps, main = "Total steps per day", col = "pink", xlab = "Number of steps")
 
 ```
-![SPD.png](RepData_PeerAssessment1/figures/SPD.png)
+![Histogram of number of steps per day](figures/SPD.png)
 
 
 Caluclating mean and median of steps per day
@@ -57,7 +57,7 @@ Median of steps per day is: `10765`
 spi <- aggregate(steps ~ interval, ACdata, mean)
 plot(spi$interval, spi$steps, type="l", xlab="Interval", ylab="Number of Steps", main="Average Number of Steps per Day by Interval")
 ```
-![Average Number of Steps per Day by Interval] path to file will go here: (figures/SPI.png)
+![Average Number of Steps per Day by Interval](figures/SPI.png)
 
 Finding the 5-minute interval that, on average, contains the maximum number of steps
 ```r
@@ -86,7 +86,7 @@ hist(spd_i$steps, main = "Total Steps Per Day", col="green", xlab="Number of Ste
 hist(spd$steps, main = "Total Steps Per Day", col="blue", xlab="Number of Steps", add=T)
 legend("topright", c("Imputed", "Non-imputed"), col=c("green", "blue"), lwd=10)
 ```
-![Total Steps per Day with NAs repalced] path to file will go here: (figures/SPD_IMP.png)
+![Total Steps per Day with NAs repalced](figures/SPD_IMP.png)
 
 New mean and new median ware calculated for transformed dataset:
 ```r
@@ -127,7 +127,7 @@ Creating plot:
 spi_i <- aggregate(steps ~ interval + dow, imputed_miss_data, mean)
 xyplot(spi_i$steps ~ spi_i$interval|spi_i$dow, main="Average Steps per Day by Interval",xlab="Interval", ylab="Steps",layout=c(1,2), type="l")
 ```
-![Activity pattern during the week and on weekends] path to file will go here: (figures/APWW.png)
+![Activity pattern during the week and on weekends](figures/APWW.png)
 
 In general we can see that overall activity during the weekend is slightly *higher* than during the week. Eventhough the maximum number of steps is lower than during the week, there are more intervals with higher number of steps. And these intervals with more steps follow eachother, creating kind of "pleatous" in the chart.
 
